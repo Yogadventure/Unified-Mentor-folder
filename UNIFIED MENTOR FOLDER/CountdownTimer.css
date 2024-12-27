@@ -1,0 +1,208 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 50px;
+    overflow: auto;
+    height: 100vh;
+    transition: all ease-in-out 0.5s; /* smooth transitions for all elements */
+
+}
+
+
+.header {
+    background-color: #20a99d;
+    padding: 15px;
+    width: max-content;
+    margin: 1rem auto;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 2px 5px #A9A9A9;
+}
+
+p {
+    font-size: 1.1rem;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.timer-section {
+    background-color: #a199998a;
+    padding: 30px;
+    font-size: 1rem;
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    box-shadow: 3px 1px 3px #3d3a3a;
+}
+
+#timeInput {
+    font-size: 1rem;
+    padding: 1rem;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: #f6f8f8;
+    box-shadow: 0 2px 5px #515050;
+    white-space: normal;
+}
+
+.button {
+    background-color: rgb(35, 141, 141);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1.5;
+    color: white;
+    border: none;
+    margin: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    animation: glow 1s ease-in-out 2;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 238, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 0 15px 10px rgba(0, 255, 238, 0.811);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 238, 0.7);
+    }
+}
+
+.button:hover {
+    background-color: #eca729;
+}
+
+#timerDisplay {
+    font-size: 1.1rem;
+    margin: 20px 0;
+    padding: 10px;
+
+}
+
+#timerNum {
+    padding: 7px;
+    margin: 10px;
+    text-align: center;
+    font-size: 1rem;
+    width: 70px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    border: none;
+    /* Removes any default border */
+    outline: none;
+    cursor: pointer;
+}
+
+#timerNum:hover {
+    box-shadow: 0 0 9px 9px rgba(0, 255, 238, 0.7);
+}
+
+.timer {
+    background-color: white;
+    font-size: 1.5rem;
+    color: rgb(7, 0, 0);
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+    border: 5px solid transparent;
+    border-bottom: 5px solid #20a99d;
+    box-shadow: 2px 2px 5px #515050;
+}
+
+i {
+    font-size: 5rem;
+    padding: 2rem;
+    position: absolute;
+    left: 50px;
+    top: 18px;
+    filter: drop-shadow(20px 9px rgba(0, 255, 238, 0.7)) drop-shadow(-20px -9px rgba(0, 255, 238, 0.7));
+    animation: rotate 3s linear infinite;
+    z-index: -1;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+label {
+    font-size: 1rem;
+    margin: 10px;
+}
+
+input[type="datetime-local"] {
+    width: 50%;
+    text-align: center;
+    padding: 2px;
+    margin: 10px;
+    font-size: 1.1rem;
+    background-color: rgba(131, 128, 128, 0.326);
+    border: 2px solid teal;
+    transition: border-color 0.3s;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
+
+    background-color: rgba(0, 255, 238, 0.7);
+}
+
+/* Media Query for smaller devices */
+@media screen and (max-width: 600px) {
+    .timer-section {
+        padding: 20px;
+    }
+
+    #timeInput {
+        padding: 0.5rem;
+    }
+
+    .button {
+        padding: 5px 10px;
+    }
+
+    #timerNum {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    #timerDisplay {
+        font-size: 1rem;
+    }
+
+    .header {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}

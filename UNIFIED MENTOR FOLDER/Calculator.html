@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A digital calculator</title>
+    <link rel="stylesheet" href="Calculator.css">
+</head>
+
+<body>
+    <h1>A BASIC DIGITAL CALCULATOR</h1>
+   
+    <section class="calculator">
+        <input id="display" placeholder="0" readonly/><br>
+        <div type="button" class="button">
+            <button type="button" class="symbols clr" onclick="Clear()">AC</button><br>
+            <button type="button" class="symbols del" onclick="Delete()">C</button>
+            <button type="button" class="numbers" onclick="Display('7')">7</button>
+            <button type="button" class="numbers" onclick="Display('8')">8</button>
+            <button type="button" class="numbers" onclick="Display('9')">9</button>
+            <button type="button" class="symbols" onclick="Display('/')">/</button>
+            <button type="button" class="numbers" onclick="Display('4')">4</button>
+            <button type="button" class="numbers" onclick="Display('5')">5</button>
+            <button type="button" class="numbers" onclick="Display('6')">6</button>
+            <button type="button" class="symbols" onclick="Display('*')">*</button>
+            <button type="button" class="numbers" onclick="Display('1')">1</button>
+            <button type="button" class="numbers" onclick="Display('2')">2</button>
+            <button type="button" class="numbers" onclick="Display('3')">3</button>
+            <button type="button" class="symbols" onclick="Display('-')">-</button>
+            <button type="button" class="numbers" onclick="Display('0')">0</button>
+            <button type="button" class="numbers" onclick="Display('.')">.</button>
+            <button type="button" class="numbers" onclick="Calculate()">=</button>
+            <button type="button" class="symbols" onclick="Display('+')">+</button>
+        </div>
+    </section>
+
+    <script src="Calculator.js"></script>
+   
+
+</body>
+
+</html>

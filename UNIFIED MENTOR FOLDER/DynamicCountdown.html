@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CountdownTimer</title>
+    <link rel="stylesheet" href="CountdownTimer.css">
+</head>
+
+<body>
+    <section id="home">
+        <div class="header">
+            <h1>Dynamic Countdown Timers:</h1>
+        </div>
+        <i class="fa-solid fa-hourglass-end"></i>
+        <p>A countdown is a sequence of backward counting time to indicate the time remaining before an event is
+            scheduled to occur.It helps you to keep track of time left before the scheduled event occurs. So GO
+            AHEAD and SET YOUR SCHEDULE EVENTS and never miss them even in slightest of inconsistency.</p>
+
+        <div class="timer-section">
+
+            <p>Enter the number of timers you desire? (Maximum 5)</p>
+            <input type="number" id="timerNum" value="1" min="1" max="5">
+            <button type="button" class="button" onclick="createTimers()">Create Timers</button>
+
+            <div id="timeInput"></div>
+
+            <button type="button" class="button" onclick="startTimers()">Start Timers</button>
+
+            <div id="timerDisplay"></div>
+            <audio src="alarmCD.wav" id="audio" preload="auto"></audio>   
+                    
+        </div>
+
+    </section>
+
+    <script src="CountdownTimer.js"></script>
+    <script src="https://kit.fontawesome.com/257c1f8973.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
