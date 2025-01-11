@@ -63,7 +63,7 @@ function Calculate() {
         return;
     }
 
-    //Explicitly Processing operators with higher precedence first 
+    //Explicitly apply BODMAS on input by Processing operators with higher precedence first 
     for (let i = 0; i < operators.length; i++) {
         if (operators[i] === '*' || operators[i] === '/') {
             try {
